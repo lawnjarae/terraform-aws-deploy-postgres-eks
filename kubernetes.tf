@@ -13,10 +13,14 @@ terraform {
 }
 
 data "terraform_remote_state" "eks" {
-  backend = "local"
+  backend = "remote"
 
   config = {
-    path = "../provision-eks-cluster/terraform.tfstate"
+    orgorganization = "carson"
+
+    worksworkspaces = {
+      name = "terraform-aws-provision-eks-cluster"
+    }
   }
 }
 
