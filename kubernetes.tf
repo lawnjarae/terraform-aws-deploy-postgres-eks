@@ -16,9 +16,9 @@ data "terraform_remote_state" "eks" {
   backend = "remote"
 
   config = {
-    orgorganization = "carson"
+    organization = "carson"
 
-    worksworkspaces = {
+    workspaces = {
       name = "terraform-aws-provision-eks-cluster"
     }
   }
