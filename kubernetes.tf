@@ -76,12 +76,12 @@ resource "kubernetes_deployment" "postgres" {
 
           env {
             name  = "POSTGRES_PASSWORD"
-            value = "TestPassword111!!!"
+            value = var.password
           }
 
           env {
-            name  = "POSTGRES_USEAR"
-            value = "postgres"
+            name  = "POSTGRES_USER"
+            value = var.username
           }
 
           port {
